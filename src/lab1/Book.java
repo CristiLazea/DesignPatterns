@@ -1,11 +1,16 @@
 package lab1;
 
+import lab2.Author;
+import lab2.Chapter;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Book {
     private String name;
     private String text;
+    private Author author;
+    private List<Chapter> chapters = new ArrayList<>();
     private List<String>paragraph;
     private List<String> images;
     private List<String> tables;
@@ -36,6 +41,10 @@ public class Book {
     public void createNewTable(String text) {
         this.tables.add(text);
     }
+
+    public void addAuthor(Author author){
+        this.author = author;
+    }
     public void print() {
         System.out.print(this.toString());
     }
@@ -47,4 +56,13 @@ public class Book {
     }
 
 
+    public int createChapter(String name) {
+        Chapter chapter = new Chapter(name);
+        chapters.add(chapter);
+        return chapters.indexOf(chapter);
+    }
+
+    public Chapter getChapter(int indexChapterOne) {
+       return  chapters.get(indexChapterOne);
+    }
 }

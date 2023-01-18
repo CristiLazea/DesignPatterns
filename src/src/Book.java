@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 
-public class Book extends Section {
+public class Book extends Section  {
     private Author author;
     private List<Element> elements = new ArrayList<>();
 

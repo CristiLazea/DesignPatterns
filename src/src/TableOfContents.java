@@ -1,6 +1,9 @@
 package src;
 
-public class TableOfContents implements Element {
+import lab6_7.Visitee;
+import lab6_7.Visitor;
+
+public class TableOfContents implements Element, Visitee {
     String something = "adi";
 
     @Override
@@ -23,7 +26,12 @@ public class TableOfContents implements Element {
     }
 
     @Override
-    public src.Element get(int i) {
+    public  src.Element get(int i) {
         return null;
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitTableOfContent(this);
     }
 }

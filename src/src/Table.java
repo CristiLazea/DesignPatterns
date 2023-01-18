@@ -1,6 +1,9 @@
 package src;
 
-public class Table implements Element{
+import lab6_7.Visitee;
+import lab6_7.Visitor;
+
+public class Table implements Element, Visitee {
     private String table;
 
     public Table(String table1) {
@@ -23,12 +26,17 @@ public class Table implements Element{
     }
 
     @Override
-    public void remove(Element e) {
+    public void  remove(Element e) {
 
     }
 
     @Override
     public Element get(int i) {
         return null;
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitTable(this);
     }
 }

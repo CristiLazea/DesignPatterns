@@ -1,6 +1,10 @@
 package src;
 
-public class Paragraph implements Element {
+import lab5.AlignStrategy;
+import lab6_7.Visitee;
+import lab6_7.Visitor;
+
+public class Paragraph implements Element, Visitee {
     private String description;
 
     public Paragraph(String paragraph1) {
@@ -10,6 +14,14 @@ public class Paragraph implements Element {
     @Override
     public String toString() {
         return "Paragraph: "+ description;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Override
@@ -28,7 +40,17 @@ public class Paragraph implements Element {
     }
 
     @Override
-    public Element get(int i) {
+    public Element  get(int i) {
         return null;
+    }
+
+
+    public void setAlignStrategy(AlignStrategy align) {
+        description = align + description;
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitParagraph(this);
     }
 }

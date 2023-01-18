@@ -1,6 +1,9 @@
 package src;
 
-public class Image implements Element{
+import lab6_7.Visitee;
+import lab6_7.Visitor;
+
+public class Image implements Element, Visitee {
     private String image;
 
     @Override
@@ -13,7 +16,7 @@ public class Image implements Element{
 
     }
 
-    public Image(String image) {
+    public Image (String image) {
         this.image = image;
     }
 
@@ -30,5 +33,10 @@ public class Image implements Element{
     @Override
     public Element get(int i) {
         return null;
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitImage(this);
     }
 }

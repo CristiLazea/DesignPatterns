@@ -1,12 +1,15 @@
 package src;
 
 
+import lab6_7.Visitee;
+import lab6_7.Visitor;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-public class Section implements Element {
+public class Section implements Element, Visitee {
 
     private String name;
 
@@ -51,8 +54,13 @@ public class Section implements Element {
     }
 
     @Override
-    public Element get(int i) {
+    public Element  get(int i) {
 
         return elements.get(i);
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitSection(this);
     }
 }

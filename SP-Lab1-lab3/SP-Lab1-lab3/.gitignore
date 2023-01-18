@@ -1,0 +1,12 @@
+/.idea/.gitignore
+/MyBook/out/production/MyBook/src/Author.class
+/MyBook/out/production/MyBook/src/Book.class
+/MyBook/out/production/MyBook/src/Chapter.class
+/MyBook/out/production/MyBook/src/Image.class
+/MyBook/out/production/MyBook/Main.class
+/.idea/modules.xml
+/MyBook/out/production/MyBook/src/Paragraph.class
+/.idea/SP-Lab1.iml
+/MyBook/out/production/MyBook/src/SubChapter.class
+/MyBook/out/production/MyBook/src/Table.class
+/.idea/vcs.xml

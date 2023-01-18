@@ -8,6 +8,5 @@ Nota 10
 
 Nota 1
 
-Missing lab 2-6
-# Nota finala propusa:
-4
+Added late lab 2-6
+# Nota propusa: 6
